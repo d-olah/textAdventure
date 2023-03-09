@@ -1,0 +1,39 @@
+//You can use functions to separate out parts of your code.
+static void RoomTwoFunction()
+{
+    Console.WriteLine("You have arrived in room two. Well done!");
+    
+}
+
+//-----------------------------
+//START OF THE MAIN PART
+//-----------------------------
+
+Console.WriteLine("What is your name? ");
+string playerName = Console.ReadLine();
+
+Console.WriteLine("Let's begin our play. Which way would you like to go?");
+string choice1 = "";
+
+//This will keep repeating until the user selects either left or right.
+do
+{
+    choice1 = Console.ReadLine();
+}
+while (choice1 != "left" && choice1 != "right");
+
+//This handles the left and right options.
+if (choice1 == "left")
+{
+    Console.WriteLine("Excellent, you have passed the first hurdle!");
+    RoomTwoFunction();
+}
+else if (choice1 == "right")
+{
+    Console.WriteLine("You have ended up in a pool of lava, full of piranhas. Problematic...");
+}
+
+//This makes sure our console does not close after finishing.
+Console.ReadLine();
+
+
